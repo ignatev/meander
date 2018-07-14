@@ -1,7 +1,7 @@
 package meander
 
 type Facade interface {
-	Pubclic() interface{}
+	Public() interface{}
 }
 
 func Public(o interface{}) interface{} {
