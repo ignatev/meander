@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 //	"runtime"
 	"github.com/ignatev/meander"
+	"os"
 )
 
+meander.APIKey = os.Getenv("GOOGLE_PLACES_API_KEY")
 func main(){
 	http.HandleFunc("/journeys", func(w http.ResponseWriter, r *http.Request) {
 		respond(w, r, meander.Journeys)
